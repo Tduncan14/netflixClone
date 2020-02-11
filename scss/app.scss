@@ -9,3 +9,13 @@ html {
 *:before {
   @include box-sizing(inherit);
 }
+
+body{
+  background-color:$black;
+
+
+  @include tablet {
+    @include bg-image('bg.jpg');
+
+  }
+}

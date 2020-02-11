@@ -37,3 +37,12 @@
 @mixin gradient($color1, $color2) {
     background: linear-gradient(to right, $color1 0%, $color2 100%);
 }
+
+
+@mixin bg-image($image){
+    background-repeat: no-repeat;
+    background-position:bottom center;
+    background-size: 2.4rem;
+    background-image: url(../img/#{$image});
+
+}
