@@ -32,6 +32,14 @@ function validateInput(event){
 
     console.log(event.target.value.length);
 
+
+
+    // remove the previous class
+    event.target.nextElementSibling.classList.remove(...states);
+
+    // add the new class
+    event.target.nextElementSibling.classList.add(classes)
+
     if(event.target.value.length === 0) {
 
         console.log('this input is empty')
@@ -64,15 +72,15 @@ function validateInput(event){
 
 
         event.target.parentElement.parentElement.insertBefore(error, event.target.parentElement.nextElementSibling)
-        
 
-        
-
-            
         }
-    
-       
-        
+        }
+        else{
+
+       if(event.target.parentElement.nextElementSibling.classList[0] === 'alert'){
+            event.target.parentElement.nextElementSibling.remove()
+
+       }
         }
     
 
